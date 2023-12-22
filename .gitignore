@@ -2,4 +2,10 @@
 *.hdf
 *.txt
 *.json
+timing/modern/.ipynb_checkpoints/Untitled-checkpoint.ipynb
 plot_perf.py
+timing/.linear_plot.py.swp
+timing/modern/NT_slides_coh/out.xml.gz
+timing/modern/NT_slides_mi/.NT_slides.sh.swp
+timing/modern/oneT_slides_coh/out.xml.gz
+
