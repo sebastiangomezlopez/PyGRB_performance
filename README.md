@@ -33,14 +33,14 @@ Modify: lines [7](https://github.com/sebastiangomezlopez/PyGRB_performance/blob/
   - path_to_frames=/home/sebastian.gomezlopez/REPOS_caltech/pycbc/examples/multi_inspiral -> this has to point where your frame files are
   - common_path=/home/sebastian.gomezlopez/performance_multi_insp/multi_insp-common -> this has to point where your template bank and veto banks are.  
 
-```
-- execute `./mi_profile.sh` 
-```
+  ```
+  - execute `./mi_profile.sh` 
+  ```
 - Timing scripts:
 Modify this [line](https://github.com/sebastiangomezlopez/PyGRB_performance/blob/b0850f3a950828ecc6b7feb4fb5e11ce927809c2/timing/modern/mi_core.sh#L60) in     `timing/modern/mi_core.sh` to point where your frame files are.
   - oneT_slides scripts
   ```
-  ./oneT_slides.sh -name coh -outpath /home/sebastian.gomezlopez/public_html/pygrb/test -outfile test
+  ./oneT_slides.sh -outpath /home/sebastian.gomezlopez/public_html/pygrb/test -outfile test
   ```
   - NT_slides scripts
   ```
