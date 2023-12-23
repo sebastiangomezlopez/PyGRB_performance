@@ -2,11 +2,7 @@
 The current repository contains several performance tests for [`pycbc_multi_inspiral`](https://github.com/gwastro/pycbc/blob/master/bin/pycbc_multi_inspiral).
 
 ## Dependencies 
-PyCBC
-grpof2dot
-graphviz
-snakeviz
-scalene
+PyCBC,grpof2dot,graphviz,snakeviz,scalene.
 
 Moreover, To reproduce the results present in. 
 
@@ -27,4 +23,9 @@ This repository contains different types of python and shell scripts to identify
     - oneS-T_lens scripts. "No slides, one template with varying lenght(`block_duration`)"
       - This is broken at the moment 
 
-NOTE: most of this scripts are refactored versions of the run.sh [example](https://github.com/gwastro/pycbc/blob/master/examples/multi_inspiral/run.sh) that analyzes GW170817. 
+NOTE: most of this scripts are refactored versions of the run.sh [example](https://github.com/gwastro/pycbc/blob/master/examples/multi_inspiral/run.sh) that analyzes GW170817.
+
+## Usage:
+'''
+- gprof2dot scripts
+'''
