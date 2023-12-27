@@ -2,6 +2,8 @@
 *.hdf
 *.txt
 *.json
+*.xml.gz
+*.sh.swp
 timing/modern/.ipynb_checkpoints/Untitled-checkpoint.ipynb
 plot_perf.py
 timing/.linear_plot.py.swp
