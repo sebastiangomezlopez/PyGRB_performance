@@ -63,7 +63,7 @@ echo "#templates,#slides,user_time,real_time" >> ${file}_$i.txt
   for t in "${templ[@]}"; do
   for slide in "${slides[@]}"; do
     echo -e "\\n\\n>> [`date`] running with $slide slides"
-    /usr/bin/time -p -o T_nt.txt ./../mi_core.sh \
+    /usr/bin/time -p -o T_nt.txt ./../../mi_core.sh \
 	    -input_path /home/sebastian.gomezlopez/performance_multi_insp/multi_insp-common \
 	    -ifos H1,L1,V1 \
 	    -block_dur $block_dur\

@@ -62,7 +62,7 @@ echo "#slides,user_time,real_time" >> ${file}_$i.txt
 
 for shift in "${shifts[@]}"; do
 echo -e "\\n\\n>> [`date`] running with $shift seconds of shift"
-/usr/bin/time -p -o T.txt ./../coh_core.sh \
+/usr/bin/time -p -o T.txt ./../../coh_core.sh \
   -input_path /home/sebastian.gomezlopez/performance_multi_insp/coh-common \
   -ifos H1,L1,V1 \
   -block_dur $block_dur \

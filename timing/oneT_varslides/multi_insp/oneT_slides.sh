@@ -1,5 +1,5 @@
 #!/bin/bash
-# ./oneT_slides.sh -name coh -outpath /home/sebastian.gomezlopez/public_html/pygrb/test -outfile test
+# ./oneT_slides.sh -outpath /home/sebastian.gomezlopez/public_html/pygrb/test -outfile test
 while [[ $# -gt 0 ]]; do
     case "$1" in
         -outpath)
@@ -61,7 +61,7 @@ echo "#slides,user_time,real_time" >> ${file}_$i.txt
 
 for slide in "${slides[@]}"; do
 echo -e "\\n\\n>> [`date`] running with $slides slides"
-/usr/bin/time -p -o T.txt ./../mi_core.sh \
+/usr/bin/time -p -o T.txt ./../../mi_core.sh \
     -input_path /home/sebastian.gomezlopez/performance_multi_insp/multi_insp-common \
     -ifos H1,L1,V1 \
     -block_dur $block_dur\

@@ -62,7 +62,7 @@ echo "#templates,#slides,user_time,real_time" >> ${file}_$i.txt
   for t in "${templ[@]}"; do
   for shift in "${shifts[@]}"; do
     echo -e "\\n\\n>> [`date`] running with $shift seconds of shift"
-    /usr/bin/time -p -o T_nt.txt ./../coh_core.sh \
+    /usr/bin/time -p -o T_nt.txt ./../../coh_core.sh \
           -input_path /home/sebastian.gomezlopez/performance_multi_insp/coh-common \
           -ifos H1,L1,V1 \
 	  -block_dur $block_dur \
@@ -87,13 +87,13 @@ done
 
 # The following python scripts converts to json files and
 # then averages to find mean&std of the timing measurements
-python /home/sebastian.gomezlopez/performance_multi_insp/translate.py \
+python ../../translate.py \
         --ifos H1 L1 V1 \
         --seg_dur ${seg_dur} \
         --input ${outpath} \
         --output ${outpath}/NT_coh_3_${seg_dur}_${block_dur} \
         --is_cohPTF
 
-python /home/sebastian.gomezlopez/performance_multi_insp/average.py \
+python ../../average.py \
         --input ${outpath} \
         --output ${outpath}/NT_coh_3_${seg_dur}_${block_dur}
