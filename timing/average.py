@@ -40,6 +40,11 @@ new['user_time'], new['user_time_std'], new['real_time'], new['real_time_std']=[
                                                                             np.mean(re_t, axis=1).tolist(),
                                                                             np.std(re_t, axis=1).tolist()
                                                                            ]
-out = os.path.join(os.path.dirname(output_File), f'avg_{os.path.basename(out_file)}.json')
+
+# Replacing f-string for python 2.x compatibility
+#out = os.path.join(os.path.dirname(output_File),
+#        f'avg_{os.path.basename(out_file)}.json')
+out = os.path.join(os.path.dirname(output_File), 
+        'avg_{}.json'.format(os.path.basename(out_file)))
 with open(out,'w') as f:
     json.dump(new, f, indent=4)

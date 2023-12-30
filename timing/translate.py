@@ -70,6 +70,8 @@ for j,in_file in enumerate(txt_files):
         out['#slides']=[ int(n_slides(elem)) for elem in out['#slides'] ]
     elif mi:
         pass
-
-    with open(f'{out_file}_{j}.json', 'w') as output:
+    # Replacing the f-string evaluation for compatibility with 
+    # the pygrb-o3b env, which is built with python 2.7
+    #with open(f'{out_file}_{j}.json', 'w') as output:
+    with open('{}_{}.json'.format(out_file, j), 'w') as output:
         output.write(json.dumps(out, indent=4))

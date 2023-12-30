@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# This script executes pycbc_multi_inspiral, but leaving the following parameters free:
+# This script executes lalapps_coh_PTF_inspiral, but leaving the following parameters free:
 # Template bank size
 # segment duration
 # block duration

@@ -58,7 +58,7 @@ echo
 n_ifos=${#ifos[@]}
 
 # Path to downloaded frames
-path_to_frames=/home/sebastian.gomezlopez/REPOS_caltech/pycbc/examples/multi_inspiral
+path_to_frames=${input_path}/..
 
 # Setting data channel names, and path to frames
 
@@ -75,6 +75,8 @@ path_to_frames=/home/sebastian.gomezlopez/REPOS_caltech/pycbc/examples/multi_ins
 channel_h=DCH-CLEAN_STRAIN_C02
 channel_l=DCH-CLEAN_STRAIN_C02
 channel_v=Hrec_hoft_V1O2Repro2A_16384Hz
+
+echo "here ${PWD}"
 
 h_frame=${path_to_frames}/H1-GATED-1187006058-5648.gwf
 l_frame=${path_to_frames}/L1-GATED-1187006058-5648.gwf
