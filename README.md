@@ -3,6 +3,8 @@ The current repository contains several performance tests for [`pycbc_multi_insp
 
 Currently the performance tests show the following comparison between `pycbc_multi_inspiral` vs `lalapps_coh_PTF_inspiral`
 
+![](results/mi_vs_coh.png)
+
 ## Dependencies 
 
 PyCBC,grpof2dot,graphviz,snakeviz,scalene.
