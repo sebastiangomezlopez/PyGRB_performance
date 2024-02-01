@@ -24,7 +24,7 @@ cpu=$(lscpu | grep 'Model name' | cut -f 2 -d ":" | awk '{$1=$1}1')
 
 seg_dur=256
 block_dur=5632
-tsize=80
+tsize=100
 
 # The following python script computes a map between timeshifts
 # and number of slides. 
@@ -63,7 +63,7 @@ echo "#slides,user_time,real_time" >> ${file}_$i.txt
 for shift in "${shifts[@]}"; do
 echo -e "\\n\\n>> [`date`] running with $shift seconds of shift"
 /usr/bin/time -p -o T.txt ./../../coh_core.sh \
-  -input_path /home/sebastian.gomezlopez/performance_multi_insp/coh-common \
+  -input_path ../../../files/coh-common \
   -ifos H1,L1,V1 \
   -block_dur $block_dur \
   -seg_dur $seg_dur \
@@ -87,9 +87,9 @@ python ../../translate.py \
         --ifos H1 L1 V1 \
         --seg_dur ${seg_dur} \
         --input ${outpath} \
-        --output ${outpath}/OT_mi_3_${seg_dur}_${block_dur} \
+        --output ${outpath}/OT_coh_3_${seg_dur}_${block_dur} \
         --is_cohPTF
 
 python ../../average.py \
         --input ${outpath} \
-        --output ${outpath}/OT_mi_3_${seg_dur}_${block_dur}
+        --output ${outpath}/OT_coh_3_${seg_dur}_${block_dur}

@@ -24,7 +24,7 @@ cpu=$(lscpu | grep 'Model name' | cut -f 2 -d ":" | awk '{$1=$1}1')
 
 seg_dur=256
 block_dur=5632
-tsize=80
+tsize=100
 
 # The following python script generates a mapping
 # that gives slideshifts and number_of_slides
@@ -62,7 +62,7 @@ echo "#slides,user_time,real_time" >> ${file}_$i.txt
 for slide in "${slides[@]}"; do
 echo -e "\\n\\n>> [`date`] running with $slides slides"
 /usr/bin/time -p -o T.txt ./../../mi_core.sh \
-    -input_path /home/sebastian.gomezlopez/performance_multi_insp/multi_insp-common \
+    -input_path ../../../files/multi_insp-common \
     -ifos H1,L1,V1 \
     -block_dur $block_dur\
     -seg_dur $seg_dur \
