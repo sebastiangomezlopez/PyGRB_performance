@@ -1,7 +1,9 @@
 # PyGRB_performance
 The current repository contains several performance tests for [`pycbc_multi_inspiral`](https://github.com/gwastro/pycbc/blob/master/bin/pycbc_multi_inspiral).
 
-Currently the performance tests show the following comparison between `pycbc_multi_inspiral` vs `lalapps_coh_PTF_inspiral`
+An extensive description of the performance tests and bottleneck identification can be found in this [wikipage](https://github.com/sebastiangomezlopez/PyGRB_performance/wiki/LOG:-Performance-tests-and-Bottlenecks). Currently the performance tests show the following comparison between `pycbc_multi_inspiral` vs `lalapps_coh_PTF_inspiral`
+
+![](results/mi_vs_coh.png)
 
 ## Dependencies 
 
